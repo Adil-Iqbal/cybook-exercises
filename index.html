@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Cypress</title>
+
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/all.min.css">
+    <link rel="stylesheet" href="static/style.css">
+
+    <script defer src="vendor/jquery.slim.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script defer src="vendor/tether.min.js"></script>
+    <script defer src="vendor/bootstrap.min.js"></script>
+    <script defer src="vendor/all.min.js"></script>
+    <script defer src="static/index.js"></script>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Learn Cypress</h1>
+            <p class="lead">Companion exercises</p>
+        </div>
+    </div>
+    <div class="container">
+
+        <div id="exercise_01" class="m-0 p-0 d-none">
+            <h1>Exercise 1</h1>
+            <p>Instructions:</p>
+            <ol>
+                <li>Install the Cypress node module.</li>
+                <li>Initialize Cypress.</li>
+                <li>Write a test that visits <code>"http://localhost:3000/"</code></li>
+                <li>Run the server using the <code>npm run serve</code> command.</li>
+                <li><i>While the server is running</i>, run the test.</li>
+            </ol>
+            <ul class="list-group">
+                <li id="searching" class="list-group-item text-secondary">
+                    <div class="spinner-border spinner-border-sm text-secondary mr-2" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    Looking for test runner...
+                </li>
+                <li id="found" class="list-group-item text-success d-none">
+                    <i class="fas fa-check mr-2"></i>
+                    Test runner found!
+                </li>
+                <li id="error" class="list-group-item text-danger d-none">
+                    <i class="fas fa-exclamation-circle mr-2"></i>
+                    Could not find test runner.
+                </li>
+            </ul>
+            <p>Once the <i>Cypress test runner</i> visits this page, the next exercise will load on its own.</p>
+        </div>
+
+        <div id="exercise_02" class="m-0 p-0 d-none">
+            <h1>Exercise 2</h1>
+            <p>Instructions:</p>
+            <ol>
+                <li>Set the <code>baseUrl</code> in the <code>cypress.json</code> file to <code>"http://localhost:3000/"</code>.</li>
+                <li>Change your test to visit <code>"/"</code> instead.</li>
+            </ol>
+            <ul class="list-group">
+                <li class="list-group-item text-success">
+                    <i class="fas fa-check mr-2"></i>
+                    Test runner found!
+                </li>
+                <li id="searching" class="list-group-item text-secondary">
+                    <div class="spinner-border spinner-border-sm text-secondary mr-2" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    Checking <code class="text-secondary">cypress.json</code>...
+                </li>
+                <li id="found" class="list-group-item text-success d-none">
+                    <i class="fas fa-check mr-2"></i>
+                    Your <code class="text-success">baseUrl</code> was set properly!
+                </li>
+                <li id="error" class="list-group-item text-danger d-none">
+                    <i class="fas fa-exclamation-circle mr-2"></i>
+                    The <code class="text-danger">baseUrl</code> was not set properly.
+                </li>
+            </ul>
+            <p>Once you visit this page with a properly configured <code>cypress.json</code> file, the next exercise will load on its own.</p>
+        </div>
+
+    </div>
+</body>
+</html>
